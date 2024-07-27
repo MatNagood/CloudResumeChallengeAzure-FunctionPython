@@ -16,4 +16,4 @@ def main(req: func.HttpRequest, doc: func.Out[func.Document], documents: func.Do
     doc.set(func.Document.from_dict(data))
 
     # Retourner une réponse HTTP 200 avec un message
-    return func.HttpResponse(f'CosmosDB mis à jour', status_code=200) 
+    return func.HttpResponse(f'Nombres visites : {data["count"]}', status_code=200) 
